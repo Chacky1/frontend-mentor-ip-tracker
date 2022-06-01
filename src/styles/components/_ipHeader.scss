@@ -1,0 +1,77 @@
+.header {
+    background-image: url('../assets/images/pattern-bg.png');
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__error {
+        color: red;
+        margin: 0;
+    }
+
+    h1 {
+        color: white;
+        margin: 1rem 0;
+    }
+
+    .search-ip {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        input {
+            position: absolute;
+            width: 40%;
+            height: 3rem;
+            border-radius: 10px;
+            border-width: 0;
+            font-family: inherit;
+            font-size: 1.1rem;
+            font-weight: 400;
+            outline: none;
+            padding: 0 3rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @media screen and (max-width: 1050px) {
+                width: 60%;
+            }
+
+            @media screen and (max-width: 700px) {
+                padding: 0 1.5rem;
+                width: 80%;
+            }
+        }
+
+        &__arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: calc((40% / 2) - (3rem / 2));
+            background-color: $very-dark-gray;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 0 10px 10px 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @media screen and (max-width: 1050px) {
+                left: calc((60% / 2) - (3rem / 2));
+            }
+
+            @media screen and (max-width: 700px) {
+
+                left: calc((80% / 2) - (3rem / 2));
+            }
+        }
+    }
+}
